@@ -56,17 +56,16 @@ $shareUrl = $proto.'://'.$host.$base.'/event.php?c='.urlencode($code);
       <span class="badge" id="countBadge">-</span>
       <a class="btn btn-ghost" href="<?= htmlspecialchars($shareUrl,ENT_QUOTES) ?>" target="_blank" rel="noopener">Open</a>
     </div>
-    <div class="muted" style="font-size:13px">Send this link to your GC - anyone with the link can add their schedule. Re-enter same name to edit.</div>
   </div>
 
   <div class="grid2">
     <div>
       <div class="card">
         <div class="card-pad">
-          <h3>Add your availability</h3>
-          <p class="muted" style="margin:4px 0 8px">Type your name, then <b>tap or drag</b> on the grid. Green = free. <span id="selCount" style="font-weight:800;color:#059669">0</span> slots selected.</p>
+          <h3>Add your availability</h3>        
           <label for="nameInput">Your name *</label>
           <input id="nameInput" class="input" type="text" inputmode="text" autocomplete="name" autocapitalize="words" placeholder="e.g. Alex, Mara, JC" maxlength="80" style="position:relative;z-index:1">
+          <span id="selCount" style="font-weight:800;color:#059669">0</span> slots selected.</p>
           <div id="nameHint" class="muted" style="font-size:12px;margin-top:4px;display:none"></div>
           <div id="selectWrap" class="schedule-wrap schedule-wrap--select" style="margin-top:10px"></div>
           <div style="display:flex;gap:8px;margin-top:10px">
@@ -74,7 +73,8 @@ $shareUrl = $proto.'://'.$host.$base.'/event.php?c='.urlencode($code);
             <button class="btn btn-ok" id="submitAvailBtn" type="button" style="flex:1">Save My Availability</button>
           </div>
           <div id="eventMsg"></div>
-          <div class="legend"><i style="background:#10b981"></i> your selection &nbsp; <i style="background:#fff"></i> busy/unpicked &nbsp; <span class="muted">Tip: drag to paint many slots</span></div>
+          <div class="legend"><i style="background:#10b981"></i> your selection &nbsp; <i style="background:#fff"></i> busy/unpicked &nbsp;
+        </div>
         </div>
       </div>
 
@@ -90,7 +90,6 @@ $shareUrl = $proto.'://'.$host.$base.'/event.php?c='.urlencode($code);
       <div class="card">
         <div class="card-pad">
           <h3>Overlapping view (heatmap)</h3>
-          <p class="muted" style="margin:4px 0 8px">Darker green = more people free. Number = headcount.</p>
           <div id="heatmapWrap" class="schedule-wrap schedule-wrap--heat"></div>
           <div class="legend">
             <span><i style="background:#ffffff"></i> 0</span>
@@ -106,14 +105,15 @@ $shareUrl = $proto.'://'.$host.$base.'/event.php?c='.urlencode($code);
       <div class="card" style="margin-top:14px">
         <div class="card-pad">
           <h3>Best times to meet</h3>
-          <p class="muted" style="margin:4px 0 8px">Ranked by most available. Dark green = top overlap.</p>
           <div id="bestList" class="best-list"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <footer class="footer"><a href="index.php">&lt;- Create another event</a> - Tip: drag to select multiple slots quickly.</footer>
+  <footer class="footer">
+    <a href="index.php" style="text-decoration:underline; font-weight:400; font-size:14px">Create another event</a>
+  </footer>
 </main>
 <script src="assets/app.js?v=11"></script>
 </body>

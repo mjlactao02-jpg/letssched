@@ -46,13 +46,11 @@
         <h3>Create a schedule poll</h3>
         <p class="muted" style="margin:4px 0 10px">Choose <b>Specific dates</b> or <b>By week</b> - both work great for forms & overlap testing.</p>
         <form id="createForm">
-          <label>Event title *</label>
+          <label>Event title</label>
           <input class="input" name="title" placeholder="e.g. Thesis Meeting, Badminton, Study Group" maxlength="150" required>
-
           <label>Description (optional)</label>
           <input class="input" name="description" placeholder="e.g. Pick your free slots this week">
-
-          <label>When? * <span class="muted" style="font-weight:400">- up to 14 dates total</span></label>
+          <label>Choose Dates<span class="muted" style="font-weight:400"> - up to 14 dates total</span></label>
           <div class="mode-tabs" role="tablist" aria-label="Date selection mode">
             <button type="button" class="mode-tab active" data-mode="dates" role="tab" aria-selected="true">Specific dates</button>
             <button type="button" class="mode-tab" data-mode="week" role="tab" aria-selected="false">By week</button>
@@ -64,7 +62,6 @@
               <input class="input" type="date" id="dateInput" aria-label="Add date">
               <button type="button" class="btn btn-ghost" id="addDateBtn" style="max-width:120px">Add date</button>
             </div>
-            <p class="muted" style="font-size:12px;margin:6px 0 0">Add dates one by one. Max 14.</p>
           </div>
 
           <!-- WEEK MODE -->
@@ -74,7 +71,6 @@
                 <label style="margin-top:0">Week *</label>
                 <input class="input" type="week" id="weekInput" aria-label="Week">
                 <input class="input" type="date" id="weekDateFallback" aria-label="Week fallback" style="display:none;margin-top:8px" placeholder="Pick any day in that week">
-                <div class="muted" style="font-size:11px;margin-top:4px" id="weekHint">Pick an ISO week (Mon-Sun). If week picker not shown, pick any day in that week.</div>
               </div>
               <div style="display:flex;align-items:flex-end">
                 <button type="button" class="btn btn-ghost btn-block" id="addWeekBtn" style="min-height:42px">Add week -&gt; dates</button>
@@ -87,7 +83,6 @@
               <button type="button" class="btn btn-ghost" id="weekDaysBtn" style="flex:1">Weekdays</button>
               <button type="button" class="btn btn-ghost" id="weekEndBtn" style="flex:1">Weekends</button>
             </div>
-            <p class="muted" style="font-size:12px;margin:8px 0 0">Selected days become concrete dates. You can mix both modes - total dates &lt;=14.</p>
           </div>
 
           <div id="datesWrap" class="dates-wrap" style="margin-top:10px"></div>
@@ -118,7 +113,6 @@
 
           <div id="createMsg"></div>
           <button type="submit" class="btn btn-primary btn-block" style="margin-top:16px">Create &amp; Get Shareable Link -&gt;</button>
-          <p class="muted" style="font-size:12px;text-align:center;margin:8px 0 0">Link: <span class="kbd">letssched/event.php?c=Ab3Xy9</span></p>
         </form>
       </div>
     </div>
@@ -132,17 +126,9 @@
             <div class="step"><b>2.</b> Copy the link &amp; send to GC. <br><span class="muted">Friends open it, type name, tap/drag their free slots.</span></div>
             <div class="step"><b>3.</b> See overlap instantly.<br><span class="muted">Heatmap + "Best times" where most people are free.</span></div>
           </div>
-          <div id="how" style="margin-top:14px;padding:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px">
-            <b>Week tip:</b> <span class="muted">In <b>By week</b>, pick <code>2026-W39</code>, check Mon-Fri, click "Add week -&gt; dates" - it expands to 5 concrete dates. You can still add extra single dates before creating.</span>
-          </div>
-        </div>
+        
       </div>
-      <div class="card" style="margin-top:14px">
-        <div class="card-pad">
-          <h3>Why no login?</h3>
-          <p class="muted" style="margin:6px 0 0">Lower friction = higher GC response rate. Re-enter same name to edit. No passwords.</p>
-        </div>
-      </div>
+  
     </div>
   </div>
 

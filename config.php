@@ -1,9 +1,9 @@
 <?php
 // config.php - DB connection for LetsSched (XAMPP defaults)
-$DB_HOST = "sql202.infinityfree.com";
-$DB_USER = "if0_42969322";
-$DB_PASS = "cyee66gV0j8Ufsj";
-$DB_NAME = "if0_42969322_letssched";
+$DB_HOST = "localhost";
+$DB_NAME = "letssched";
+$DB_USER = "root";
+$DB_PASS = "";
 
 try {
     $pdo = new PDO(
